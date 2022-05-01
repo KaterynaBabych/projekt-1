@@ -4,7 +4,9 @@
   --first-color: #ffffff;
   --second-color: #2196f3;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: Roboto, sans-serif;
   color: var(--text-color);
@@ -12,11 +14,16 @@ body {
 }
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 .container {
   width: 1200px;
@@ -65,12 +72,49 @@ ul {
   font-weight: 500;
   color: var(--title-color);
 }
-
 .menu-contact {
   display: flex;
   margin-left: auto;
 }
-.icon-mail {
+.icon-mail,
+.icon-tel {
   margin-right: 10px;
-  color: var(--text-color);
+  fill: var(--text-color);
+}
+.nav-icon-mail,
+.nav-icon-tel {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-icon-mail:hover,
+.nav-icon-mail:focus {
+  color: var(--second-color);
+}
+.nav-icon-mail:hover,
+.nav-icon-mail:focus .icon-mail {
+  fill: var(--second-color);
+}
+.icon-mail:hover {
+  fill: var(--second-color);
+}
+.mail {
+  margin-right: 50px;
+}
+.nav-icon-tel:hover,
+.nav-icon-tel:focus {
+  color: var(--second-color);
+}
+.nav-icon-tel:hover,
+.nav-icon-tel:focus .icon-tel {
+  color: var(--second-color);
+}
+
+.icon-tel:hover,
+.icon-tel:focus {
+  fill: var(--second-color);
 }
