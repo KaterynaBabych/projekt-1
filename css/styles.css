@@ -118,3 +118,8 @@ img {
 .icon-tel:focus {
   fill: var(--second-color);
 }
+.form {
+  max-width: 280px;
+  height: 466px;
+  background-color: #fffff9;
+}
