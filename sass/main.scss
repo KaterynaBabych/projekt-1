@@ -1,5 +1,13 @@
 .form {
     max-width: 280px;
     height: 466px;
-    background-color: #fffff9;
+    
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.26;
+        color: $fontColorPrimary;
+
+    }
 }
