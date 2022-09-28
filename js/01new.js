@@ -1,11 +1,14 @@
 
-const workers = 8;
-const minSalary = 500;
-const maxSalary = 2000;
-let total;
+const employees = 7;
+const minSalary = 100;
+const maxSalary = 800;
+let totalSalary = 0;
 
-for (let i = 0; i < workers; i += 1){
-  console.log(i);
-  const mathRandom = Math.random()*((maxSalary-minSalary)+minSalary)
-  console.log(mathRandom);
-};
+for (let i = 1; i <= employees; i += 1){
+  console.log(`Работник: ${i}`);
+  const salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
+  // console.log(salary);
+  totalSalary+=salary
+}
+
+console.log(`Общая зарплата всех сотрудников: ${totalSalary}`);
