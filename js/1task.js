@@ -420,3 +420,151 @@
 // }
 
 
+// // 27
+// // Функция getSubscriptionPrice(type) получает строку с типом подписки пользователя(параметр type),
+// //     проверяет её на совпадение с тремя возможными типами ежемесячной подписки и возвращает цену хранящуюся в переменной price.
+
+// // Если значение параметра type это строка:
+
+// // "starter" - цена подписки 0 кредитов.
+// // "professional" - цена подписки 20 кредитов.
+// // "organization" - цена подписки 50 кредитов.
+// // Изначально в теле функции была инструкция if...else, которая выглядела вот так.
+// // После рефакторинга инструкция if..else была заменена на switch.Дополни код инструкции switch, чтобы функция работала правильно.
+
+// function getSubscriptionPrice(type) {
+//   let price;
+  
+//  switch (type) {
+//     case "starter":
+//       price = 0;
+//       break;
+
+//     case "professional":
+//       price = 20;
+//       break;
+
+//     case "organization":
+//       price = 50
+//       break;
+//   }
+
+//   return price;
+// }
+
+
+// // 28
+// // Функция checkPassword(password) получает пароль в параметр password, проверяет его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает сообщение о результате сравнения, хранящееся в переменной message.
+
+// // Если значение параметра password:
+
+// // равно null, значит пользователь отменил операцию и в message записывается строка "Canceled by user!".
+// // совпадает со значением ADMIN_PASSWORD, в переменную message присваивается строка "Welcome!".
+// // не удовлетворяет ни одному из предыдущих условий, в переменную message записывается строка "Access denied, wrong password!".
+// // Проведи рефакторинг кода, заменив инструкцию if..else на switch, и не забудь о блоке default (аналог else).
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+
+
+//   switch (password){
+//     case null:
+//         message = "Canceled by user!";
+//       break;
+//     case ADMIN_PASSWORD:
+//        message = "Welcome!";
+//       break;
+//     default:
+//       message = "Access denied, wrong password!";
+//   }
+ 
+//   return message;
+// }
+
+
+// // 29
+// // Функция getShippingCost(country) должна проверять возможность доставки товара в страну пользователя (параметр country) и возвращать сообщение о результате хранящееся в переменной message. Обязательно используй инструкцию switch.
+
+// // Формат возвращаемой строки "Shipping to <country> will cost <price> credits", где вместо <country> и <price> необходимо подставить соотвествующие значения.
+
+// // Список стран и стоимость доставки:
+
+// // China - 100 кредитов
+// // Chile - 250 кредитов
+// // Australia - 170 кредитов
+// // Jamaica - 120 кредитов
+// // Из списка видно, что доставка есть не везде. Если указанной страны нет в списке, то функция должна вернуть строку "Sorry, there is no delivery to your country"
+
+// function getShippingCost(country) {
+//   let message;
+ 
+// switch(country){
+//   case "China" :
+//     message = "Shipping to China will cost 100 credits";
+//     break;
+//   case "Chile" :
+//     message = "Shipping to Chile will cost 250 credits";
+//     break;
+//   case "Australia" :
+//     message = "Shipping to Australia will cost 170 credits";
+//     break;
+//   case "Jamaica" :
+//     message = "Shipping to Jamaica will cost 120 credits";
+//     break;
+//     default:
+//     message ="Sorry, there is no delivery to your country";
+    
+// }
+
+//   return message;
+// }
+
+
+// // 30
+// // Функция getNameLength(name) принимает имя(параметр name) и возвращает строку, в которой указана его длина.
+// //  Дополни шаблонную строку в переменной message длиной строки из параметра name.
+
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`;
+
+//   return message;
+// }
+
+
+// // 31
+// // Дополни код присвоив объявленным переменным выражения обращения к соответствующим элементам или свойствам строки в переменной course.
+
+// // courseTopicLength - длина строки.
+// // firstElement - первый символ строки.
+// // lastElement - последний символ строки.
+// const courseTopic = "JavaScript essentials";
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length-1];
+
+
+// // 32
+// // Функция getSubstring(string, length) принимает строку и возвращает подстроку от начала и до length символов.
+// //  Она объявляет два параметра, значения которых будут задаваться во время её вызова:
+
+// // string - оригинальная строка
+// // length - количество символов с начала строки для подстроки
+// // Присвой переменной substring выражение создания подстроки длинной length символов (от начала) из строки string.
+
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length);
+
+//   return substring;
+// }
+
+
+// 33
+// Функция formatMessage(message, maxLength) принимает строку (параметр message) и форматирует её, если длина превышает значение в параметре maxLength.
+
+// Дополни код функции так, что если длина строки:
+
+// не превышает maxLength, функция возвращает её в исходном виде.
+// больше maxLength, то функция обрезает строку до maxLength символов и добавляет в конец троеточие "...", после чего возвращает укороченную версию.
+
