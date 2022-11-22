@@ -74,3 +74,42 @@
 //   console.log("Hello, this is my first function!")
 // };
 // sayHi()
+
+// // 8
+// // Функция add должна уметь складывать три числа и выводить результат в консоль.
+// //  Добавь функции add три параметра a, b и c, которые будут получать значения аргументов при её вызове.
+// // Дополни console.log() так, чтобы он логировал строку "Addition result equals <result>", где <result> это сумма переданных чисел.
+
+// function add(a, b, c ) {
+//    console.log(`Addition result equals ${a+b+c}`);
+// }
+
+// add(15, 27, 10);
+// add(10, 20, 30);
+// add(5, 10, 15);
+
+// // 9
+// // Дополни код функции add так, чтобы она возвращала результат сложения значений трёх параметров a, b и c.
+// function add(a, b, c) {
+//   return a+b+c;
+// }
+
+// add(2, 5, 8); // 15
+// console.log(add(15, 27, 10));
+// console.log(add(10, 20, 30));
+// console.log(add(5, 10, 15));
+
+// // 10
+// // Функция makeMessage(name, price) составляет и возвращает сообщение о покупке.
+// //  Она объявляет два параметра, значения которых будут задаваться во время её вызова.
+
+// // name - название товара
+// // price - цена товара
+// // Дополни код функции так, чтобы в переменную message записывалась строка
+// // "You picked <product name>, price per item is <product price> credits",
+// //   где < product name > и < product price > это значения параметров name и price.Используй синтаксис шаблонных строк.
+
+// function makeMessage (name, price) {
+//    const message = `You picked ${name}, price per item is ${price} credits`;
+//    return message;
+// };
